@@ -19,6 +19,10 @@
 
 /*General Styling*/
 
+:root {
+    --main-nav-height: 30px;
+}
+
 .subtitle {
     font-size: 20px;
     font-weight: bold;
@@ -26,6 +30,44 @@
 
 figure img {
     width: 100%;
+}
+
+main {
+    margin-top: var(--main-nav-height);
+}
+
+/*Main Nav*/
+
+#main-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    border-bottom: 1px solid #E2E2E2;
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: left;
+    height: var(--main-nav-height);
+    z-index: 2;
+}
+
+#main-nav .nav-left {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+#main-nav .nav-right {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+#main-nav .nav-left > *, #main-nav .nav-right > * {
+    padding: 0px 15px;
 }
 
 /*Article*/
